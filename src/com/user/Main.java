@@ -25,6 +25,11 @@ public class Main {
         System.out.println("Enter your 10 digit phone number: ");
         String phone = sc.next();
         v.phoneNumberValidation(phone);
+        
+        System.out.println("Enter your password(it should be of minimum length 8): ");
+        String password = sc.next();
+        v.passwordValidation(password);
+
 	}
 	
 
