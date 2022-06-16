@@ -12,6 +12,11 @@ public class Main {
         System.out.println("Enter first name: ");
         String fname = sc.next();
         v.nameValidation(fname);
+        
+
+        System.out.println("Enter last name: ");
+        String lname = sc.next();
+        v.nameValidation(lname);
 	}
 	
 
