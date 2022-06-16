@@ -22,5 +22,12 @@ public class Validation {
 	        Matcher mt = pt.matcher(name);
 	        check(mt.find());
 	    }
+	 public void emailValidation(String email)
+	    {
+	        String regex = "^[abc]{1}[A-Za-z0-9]*@{1}[A-Za-z0-9]{1,}.com{1}";
+	        Pattern pt = Pattern.compile(regex);
+	        Matcher mt = pt.matcher(email);
+	        check(mt.find());
+	    }
 
 }
