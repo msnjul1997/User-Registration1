@@ -21,6 +21,10 @@ public class Main {
         System.out.println("Enter your Email-ID: ");
         String email = sc.next();
         v.emailValidation(email);
+        
+        System.out.println("Enter your 10 digit phone number: ");
+        String phone = sc.next();
+        v.phoneNumberValidation(phone);
 	}
 	
 
