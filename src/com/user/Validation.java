@@ -25,7 +25,7 @@ public class Validation {
 	    }
 	 public boolean emailValidation(String email)
 	    {
-	        String regex = "^[abc]{1}[A-Za-z0-9]*@{1}[A-Za-z0-9]{1,}.com{1}";
+	        String regex ="^[a-zA-Z]+[a-zA-Z0-9]*[- . + _]?[a-zA-Z0-9]+[@]{1}[a-z0-9]+[.]{1}[a-z]+[.]?[a-z]+$";
 	        Pattern pt = Pattern.compile(regex);
 	        Matcher mt = pt.matcher(email);
 	        check(mt.find());
@@ -51,8 +51,8 @@ public class Validation {
 	    }
 	 public boolean passwordValidation(String password)
 	    {
-		    // Rule 2 = Min 8 Characters & One UpperCase
-		    String regex = "^(?=.[a-z0-9!@#&()–[{}]:;',?/*~$^+=<>])(?=.*[A-Z]).{8,}";
+		 //This is for rule 4
+	        String regex = "[A-Z]{1,}[a-z0-9!@#&()–[{}]:;',?/*~$^+=<>]{7,}";
 	        Pattern pt = Pattern.compile(regex);
 	        Matcher mt = pt.matcher(password);
 	        check(mt.find());
