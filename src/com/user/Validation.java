@@ -15,12 +15,13 @@ public class Validation {
 	            System.out.println("Not valid");
 	        }
 	    }
-	 public void nameValidation(String name)
+	 public boolean nameValidation(String name)
 	    {
 	        String regex ="^[A-Z]{1}+[a-z]{2,}$";
 	        Pattern pt = Pattern.compile(regex);
 	        Matcher mt = pt.matcher(name);
 	        check(mt.find());
+			return false;
 	    }
 	 public void emailValidation(String email)
 	    {

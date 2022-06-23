@@ -8,11 +8,9 @@ public class Main {
         Validation v = new Validation();
         Scanner sc = new Scanner(System.in);
         
-        
         System.out.println("Enter first name: ");
         String fname = sc.next();
         v.nameValidation(fname);
-        
 
         System.out.println("Enter last name: ");
         String lname = sc.next();
