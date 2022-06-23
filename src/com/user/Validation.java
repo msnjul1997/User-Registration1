@@ -21,22 +21,25 @@ public class Validation {
 	        Pattern pt = Pattern.compile(regex);
 	        Matcher mt = pt.matcher(name);
 	        check(mt.find());
-			return false;
+			return mt.matches();
 	    }
-	 public void emailValidation(String email)
+	 public boolean emailValidation(String email)
 	    {
 	        String regex = "^[abc]{1}[A-Za-z0-9]*@{1}[A-Za-z0-9]{1,}.com{1}";
 	        Pattern pt = Pattern.compile(regex);
 	        Matcher mt = pt.matcher(email);
 	        check(mt.find());
+			return mt.matches();
+			
 	    }
 	 
-	 public void phoneNumberValidation(String phone)
+	 public boolean phoneNumberValidation(String phone)
 	    {
 	        String regex = "^(91|0)?+[7-9]{1}+[0-9]{9}$";
 	        Pattern pt = Pattern.compile(regex);
 	        Matcher mt = pt.matcher(phone);
 	        check(mt.find());
+			return mt.matches();
 	    }
 	 public void passwordValidation1(String password)
 	    {
@@ -46,12 +49,13 @@ public class Validation {
 	        Matcher m = p.matcher(password);
 	        check(m.find());
 	    }
-	 public void passwordValidation(String password)
+	 public boolean passwordValidation(String password)
 	    {
 		    // Rule 2 = Min 8 Characters & One UpperCase
 		    String regex = "^(?=.[a-z0-9!@#&()–[{}]:;',?/*~$^+=<>])(?=.*[A-Z]).{8,}";
-	        Pattern p = Pattern.compile(regex);
-	        Matcher m = p.matcher(password);
-	        check(m.find());
+	        Pattern pt = Pattern.compile(regex);
+	        Matcher mt = pt.matcher(password);
+	        check(mt.find());
+			return mt.matches();
 	    }
 }
